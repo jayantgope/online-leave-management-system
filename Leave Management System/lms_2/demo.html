@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bg.gif);
+}
+#content_panel {
+	float: right;
+	height: auto;
+	width: 795px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-radius: 5px;
+	color: #333;
+}
+
+#content_panel input[type="text"],
+#content_panel input[type="password"],
+#content_panel select{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/* [disabled]-moz-box-sizing: border-box; */
+	width: 200px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #069;
+	padding: 1%;
+	color: #555;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 95%;
+	margin-right: 5px;
+}
+
+#content_panel input[type="text"]:hover,
+#content_panel input[type="password"]:hover,
+#content_panel select:hover{
+	background-color: #FF9;
+	
+}
+#content_panel input[type="text"]:focus,
+#content_panel input[type="password"]:focus,
+#content_panel select:focus{
+	box-shadow: 0 0 5px #0099CC;
+	padding: 1%;
+	border: 1px solid #0099CC;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#content_panel input[type="submit"]{
+	width: 200px;
+	height: 35px;
+	background: #069;
+	color: #FFF;
+	padding: 1%;
+	border-bottom: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	cursor: pointer;
+	margin-left: 165px;
+}
+#content_panel input[type="submit"]:hover{
+	background:#09C;
+}
+#content_panel label {
+	display: block;
+	margin-top: 10px;
+	clear: both;
+	float: left;
+	margin-bottom: 10px;
+}
+#content_panel label > span {
+	width: 100px;
+	margin-right: 30px;
+	margin-left: 30px;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+	text-align:left;
+
+}
+#content_panel span.required {
+	color: #F00;
+	font-weight: bolder;
+}
+#heading {
+	height: 40px;
+	background-color: #069;
+	border-radius: 5px;
+	text-align: left;
+	color: #FFF;
+	padding-right: 10px;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+</style>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <div id="title">Leave Management System</div>
+    <div id="quick_links">
+   	  <ul>
+        	<li><a class="home" href="#">Home</a></li>
+            <li>|</li>
+            <li><a class="change_password" href="#">Change Password</a></li>
+            <li>|</li>
+        <li><a class="logout" href="index.html">Logout</a></li>
+        </ul>
+    </div>
+  </div>
+  <div id="content_panel">
+    <div id="heading">Add Staff<hr size="2" color="#FFFFFF" ice:repeating=""/>
+</div>
+    <form action="admin/add_staff.php" method="post">
+      <p>
+        <label for="username" ><span>Username <span class="required">*</span></span>
+          <input type="text" name="username" id="username" placeholder="Username" required="required"/>
+        </label>
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <label for="password" ><span>Password <span class="required">*</span></span>
+          <input type="text" name="password" id="password" placeholder="Password" required="required" />
+        </label>
+        <label for="full_name" ><span>Name <span class="required">*</span></span>
+          <input type="text" name="first_name" id="first_name" placeholder="First" required="required"/>
+          <input type="text" name="middle_name" id="middle_name" placeholder="Middle"/>
+          <input type="text" name="last_name" id="last_name" placeholder="Last" required="required"/>
+        </label>
+        <label for="designation" ><span>Designation <span class="required">*</span></span>
+          <select id="designation" name="designation">
+            <option>--Select--</option>
+            <option>Admin</option>
+            <option>Program Coordinator</option>
+            <option>Staff</option>
+          </select>
+        </label>
+        <label>
+          <input type="submit" value="Add" />
+        </label>
+      </p>
+      <p>&nbsp; </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </form>
+  </div>
+  <div id="side_bar">
+  	<ul>
+    	<li class="menu_head">Controls</li>
+    </ul>
+  	<ul>
+    	<li><a href="#">Home</a></li>
+    	<li><a href="admin/add_leave.php">Add Leave</a></li>
+        <li><a href="add_staff.html">Add Staff</a></li>
+        <li><a href="#">Type of Leave</a></li>
+        <li><a href="#">Leave Requests</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+  </div>
+  <div id="footer">
+  	<p><br />&copy; J!N 2015, All Rights Reserved.</p>
+  </div>
+</div>
+</body>
+</html>
